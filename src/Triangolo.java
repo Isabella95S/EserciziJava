@@ -1,9 +1,13 @@
 public class Triangolo extends Forma{
 
-    private double base;
-    private double altezza;
+    private double base,altezza;
 
-    public Triangolo(double base, double altezza){
+    Triangolo(){    //costruttore senza parametri
+        base = 3;
+        altezza = 5;
+    }
+
+    Triangolo(double base, double altezza){ //costruttore con parametri
         this.base = base;
         this.altezza = altezza;
     }
@@ -21,8 +25,8 @@ public class Triangolo extends Forma{
         this.altezza=altezza;
     }
     @Override
-    public void calcolaArea(){
-        double area = base * altezza/2;
-        System.out.println("L'area del triangolo è : " + area);
+    double calcolaArea() { //implement metodo astratto
+        return base * altezza / 2;
+
     }
 }
